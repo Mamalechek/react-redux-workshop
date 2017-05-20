@@ -16,7 +16,7 @@ export default class Input extends React.Component {
         return (
             <div className="header">
                 <h3>Enter city name:</h3>
-                <input type="text" value={this.props.name} onKeyPress={this.onKeyPress} />
+                <input type="text" onKeyPress={this.onKeyPress} />
 
                 <style jsx>{`
                     .header {
