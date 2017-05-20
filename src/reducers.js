@@ -47,7 +47,6 @@ const weatherReducer = function (
     }
     case 'ADD_WEATHER': {
         let newState;
-        console.log(action.payload);
         newState = Object.assign({}, state, {
             forecast: extractWhetherData(action.payload),
             visible: true,
@@ -69,7 +68,6 @@ const weatherReducer = function (
 }
 
 const extractWhetherData = function (obj) {
-    console.log(obj.weather);
     const { weather, main, name, coord } = obj;
     const temp =  Math.round((main.temp - 273) * 100) / 100;
 

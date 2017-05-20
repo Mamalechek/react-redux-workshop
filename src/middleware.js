@@ -42,7 +42,7 @@ export function request(store) {
 }
 
 const makeRequest = function (URL) {
-    let weather = fetch(URL)
+    let weather = fetch(URL, {mode: 'cors'})
         .then((res) => {
             return res.json();
         })
